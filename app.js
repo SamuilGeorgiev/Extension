@@ -8,13 +8,16 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    renderLeads()
+
 })
 
-//display leads from the array using innerHTML
-let listItems = ""
+// create a function that display leads from the array using innerHTML
+function renderLeads(){
+    let listItems = ""
 for (let i = 0; i < myLeads.length; i++) {
     
     listItems += "<li>" + myLeads[i] + "</li>"
 }
 ulEl.innerHTML = listItems
+}
