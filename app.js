@@ -12,6 +12,9 @@ inputBtn.addEventListener("click", function() {
 })
 
 //display leads from the array using innerHTML
+let listItems = ""
 for (let i = 0; i < myLeads.length; i++) {
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    
+    listItems += "<li>" + myLeads[i] + "</li>"
 }
+ulEl.innerHTML = listItems
